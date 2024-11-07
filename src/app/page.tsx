@@ -1,101 +1,58 @@
-import Image from "next/image";
+// src/app/demo/page.js
+import LineChartComponent from '../../component/Line'
+import PieChartComponent from '../../component/Pie'
+import DoughnutChartComponent from '../../component/Doughnut'
+import RadarChartComponent from '../../component/Radar'
+import PolarAreaChartComponent from '../../component/Polar'
+import BubbleChartComponent from '../../component/Bubble'
+import ScatterChartComponent from '../../component/Scatter'
+import HorizontalBarChartComponent from '../../component/HorizontalBar'
+import MixedChartComponent from '../../component/Mixed'
 
-export default function Home() {
+const ChartsPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className='bg-gray-100 p-10'>
+      <h1 className='text-black text-3xl font-bold text-center mb-10'>Charts Showcase</h1>
+      <div className='space-y-10'>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Line Chart</h2>
+          <LineChartComponent />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Pie Chart</h2>
+          <PieChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Doughnut Chart</h2>
+          <DoughnutChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Radar Chart</h2>
+          <RadarChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Polar Area Chart</h2>
+          <PolarAreaChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Bubble Chart</h2>
+          <BubbleChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Scatter Chart</h2>
+          <ScatterChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Horizontal Bar Chart</h2>
+          <HorizontalBarChartComponent />
+        </div>
+        <div className='max-w-[60%] p-4 bg-white rounded-lg shadow-lg'>
+          <h2 className='text-black text-xl font-semibold mb-4 text-center'>Mixed Chart</h2>
+          <MixedChartComponent />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
+
+export default ChartsPage
