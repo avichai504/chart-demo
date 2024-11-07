@@ -1,4 +1,5 @@
 // src/app/demo/page.js
+// TEST
 import LineChartComponent from '../../../component/Line';
 import PieChartComponent from '../../../component/Pie';
 import DoughnutChartComponent from '../../../component/Doughnut';
